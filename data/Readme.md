@@ -21,7 +21,7 @@ Data on hydrometer tests aggregated taken from https://thefatrumpirate.com/hydro
 Data taken from Drecon's hydrometer measurements at http://www.drecon.dk/index.php/17-list-of-rum-measured last updated 2014-05-26
 
 
-## Data from Drecon
+## Data from Rum Shop Boy
 Data taken from Rum Shop Boy's hydrometer measurements at https://rumshopboy.com/hydrometer-tests/
 
 - rum_hydrometer_rumshopboy.csvwith hydrometer and sugar  calculations
