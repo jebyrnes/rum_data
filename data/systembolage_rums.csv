@@ -1,4 +1,4 @@
-id,itemId,itemNumber,name,name2,price,volume,pricePerLiter,salesStart,packaging,seal,origin,countryOfOrigin,producer,supplier,vintage,alcoholByVolume,assortment,organic,kosher,base,price_per_liter_use
+id,itemId,itemNumber,name,name2,price,volume,pricePerLiter,salesStart,packaging,seal,origin,countryOfOrigin,producer,supplier,vintage,alcoholByVolume,assortment,organic,kosher,base,price_per_liter_usd
 8733002,1003072,87330,Rhum Selection,Barbados,555,500,1110,2015-10-01,Flaska,,,Barbados,Granqvist Beverage House AB,Granqvist Beverage House AB,,45.00%,BS,FALSE,FALSE,,122.1
 8797202,1003078,87972,Rhum Selection,Guatemala,555,500,1110,2015-10-01,Flaska,,,Guatemala,Granqvist Beverage House AB,Granqvist Beverage House AB,,45.00%,BS,FALSE,FALSE,,122.1
 8767002,1003081,87670,Rhum Selection,Trinidad,555,500,1110,2015-10-01,Flaska,,,Trinidad,Granqvist Beverage House AB,Granqvist Beverage House AB,,45.00%,BS,FALSE,FALSE,,122.1

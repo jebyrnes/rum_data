@@ -39,7 +39,7 @@ rums <- sb_json$items %>%
     TRUE ~ ""
     )) %>%
   select(-ingredientDescription) %>% #don't need it anymore
-  mutate(price_per_liter_use = pricePerLiter*0.11) #as of 2020-11-02
+  mutate(price_per_liter_usd = pricePerLiter*0.11) #as of 2020-11-02
 
 readr::write_csv(rums, "data/systembolage_rums.csv")
 
