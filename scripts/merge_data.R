@@ -52,8 +52,13 @@ hydro_rr_join <- left_join(hydro_data, hydro_lut) %>%
   mutate(name = iconv(name, from = 'UTF-8', to = 'ASCII//TRANSLIT')) %>%
   right_join(rum_ratings)
 
-
-q <- r1$name[1]
-z <- rum_ratings$name[37]
+plot(score ~ additives_g_l, data = hydro_rr_join)
 
 # merge in systembolage for price info
+systembolage <- read_csv("data/systembolage_rums.csv") %>%
+  rename(company_name = name) %>%
+  mutate(name = paste(company_name, name2))
+
+all_sources_join <- left_join(hydro_rr_join, systembolage)
+
+write_csv(all_sources_join, "merged_rum_master.csv")
