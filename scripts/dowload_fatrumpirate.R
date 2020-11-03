@@ -21,4 +21,4 @@ tbl <- html_nodes(fatrum, "table")[[1]] %>%
          percent_abv_measured = as.numeric(percent_abv_measured)
   )
 
-write.csv(tbl, "data/rum_hydrometer_fatrumpirate.csv")
+write.csv(tbl, "data/rum_hydrometer_fatrumpirate.csv", row.names = FALSE)

@@ -41,7 +41,7 @@ rums <- sb_json$items %>%
   select(-ingredientDescription) %>% #don't need it anymore
   mutate(price_per_liter_use = pricePerLiter*0.11) #as of 2020-11-02
 
-write.csv(rums, "data/systembolage_rums.csv")
+readr::write_csv(rums, "data/systembolage_rums.csv")
 
 # get sugar content?
 # # Sockerhalt

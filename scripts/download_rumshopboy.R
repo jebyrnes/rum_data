@@ -23,8 +23,12 @@ tbl_rsb <- html_nodes(rumshopboy, "table")[[1]] %>%
     est_sugar = gsub("^$", "0", est_sugar),
     est_sugar = as.numeric(est_sugar),
     
-    label_abv = gsub("%", "0", label_abv),
-    hydro_abv = gsub("%", "0", hydro_abv)
+    label_abv = gsub("%", "", label_abv) %>% as.numeric,
+    hydro_abv = gsub("%", "", hydro_abv),
+    hydro_abv = gsub("41-42", "41.5", hydro_abv),
+    hydro_abv = gsub("57-80", "NA", hydro_abv),
+    hydro_abv = as.numeric(hydro_abv)
+
   )
 
-write.csv(tbl_rsb, "data/rum_hydrometer_rumshopboy.csv")
+write.csv(tbl_rsb, "data/rum_hydrometer_rumshopboy.csv", row.names = FALSE)

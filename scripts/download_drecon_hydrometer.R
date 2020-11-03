@@ -30,6 +30,9 @@ parse_rum_table <- function(atab){
 }
 
 
-tbls_df <- map_df(tbls, parse_rum_table)
+tbls_df <- map_df(tbls, parse_rum_table) %>%
+  janitor::clean_names() %>%
+  mutate(hydrometer_measurement_reading = gsub("<", "", hydrometer_measurement_reading),
+         hydrometer_measurement_reading = as.numeric(hydrometer_measurement_reading))
 
-write.csv(janitor::clean_names(tbls_df), "data/rum_hydrometer_drecon.csv")
+write.csv(tbls_df, "data/rum_hydrometer_drecon.csv", row.names = FALSE)
